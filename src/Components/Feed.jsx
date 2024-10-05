@@ -23,12 +23,15 @@ const Feed = () => {
     fetchFeed()
    }
   },[])
+  if(feed===null){
+    return <h1> Feed is closed</h1>
+  }
   return (
     <div className='flex justify-center p-10 m-10'>
-      {/* {
-        feed && feed.map((el)=><Usercard key={el.id} user={el}/>)
-      } */}
-      <h1>Feed</h1>
+      
+      <h1 className='text-3xl'>Feed</h1>
+     {feed[0]? <Usercard user={feed[0]}/>:""}
+
     </div>
   )
 }
