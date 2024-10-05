@@ -35,7 +35,7 @@ const reviewRequest=async(status,id)=>{
         </ul>
         <p>{user?.about}</p>
         <div className="card-actions justify-end">
-          <button className="btn  btn-outline  btn-primary" onClick={()=>reviewRequest("ignore",user?._id)}>Ignore</button>
+          <button className="btn  btn-outline  btn-primary" onClick={()=>reviewRequest("ignored",user?._id)}>Ignore</button>
           <button className="btn  btn-outline  btn-secondary" onClick={()=>reviewRequest("interested",user?._id)}>Interested</button>
         </div>
       </div>

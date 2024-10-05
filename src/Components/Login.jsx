@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addUser } from "../Utils/UserSlice";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BASE_URL } from "../Utils/constant";
 
 const Login = () => {
@@ -78,9 +78,9 @@ const Login = () => {
 
           {/* Forgot Password */}
           <div className="text-center mt-4">
-            <a href="#" className="text-primary hover:underline">
-              Forgot Password?
-            </a>
+            <Link to="/signup" className="text-primary hover:underline">
+              New to Dev Tinder ? Plese Signup first
+            </Link>
           </div>
         </div>
       </div>
